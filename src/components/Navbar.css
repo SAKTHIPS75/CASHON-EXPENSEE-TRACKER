@@ -1,0 +1,142 @@
+/* Container for sidebar and main content */
+.navbar-container {
+  display: flex;
+  position: relative; /* To contain the sidebar toggle on small screens */
+}
+
+/* Sidebar styles */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: -200px; /* Initially hidden off-screen */
+  height: 100%;
+  width: 200px;
+  background-color: #222; /* Slightly darker shade for modern look */
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.4); /* Slightly reduced shadow */
+  transition: left 0.3s ease, width 0.3s ease; /* Smooth transition */
+  z-index: 1000;
+  border-radius: 0 8px 8px 0; /* Reduced rounded corners */
+}
+
+/* Responsive sidebar width */
+@media (max-width: 768px) {
+  .navbar {
+    width: 160px; /* Smaller width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    width: 140px; /* Even smaller width for very small screens */
+  }
+}
+
+.navbar-container.sidebar-open .navbar {
+  left: 0; /* Slide in when open */
+}
+
+/* Sidebar toggle button */
+.sidebar-toggle {
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 1001; /* Ensure toggle is above sidebar */
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  background-color: #333; /* Matching background for consistency */
+  color: #fff;
+  padding: 8px;
+  border-radius: 50%; /* Rounded button for aesthetic */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Slightly reduced shadow */
+  transition: background-color 0.3s;
+}
+
+.sidebar-toggle:hover {
+  background-color: #444; /* Slightly lighter on hover */
+}
+
+.navbar-title {
+  font-size: 20px; /* Slightly smaller title */
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-align: center; /* Centered title */
+  color: #ff9800; /* Accent color for title */
+}
+
+.nav-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* Slightly reduced gap between links */
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px; /* Slightly smaller font size */
+  padding: 8px 12px;
+  border-radius: 4px; /* Reduced rounded link items */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #ff9800; /* Highlight link on hover */
+  color: #222; /* Darker text color on hover */
+}
+
+.profile-menu {
+  margin-top: auto; /* Push the profile menu to the bottom */
+  position: relative;
+}
+
+.profile-button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 14px; /* Slightly smaller font size */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-arrow {
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #333; /* Matching background for dropdown */
+  color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); /* Slightly reduced shadow */
+  overflow: hidden;
+  white-space: nowrap;
+  z-index: 1000;
+}
+
+.dropdown-link {
+  display: block;
+  padding: 8px 16px; /* Slightly reduced padding */
+  text-decoration: none;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.dropdown-link:hover {
+  background-color: #ff9800; /* Match link hover effect */
+}

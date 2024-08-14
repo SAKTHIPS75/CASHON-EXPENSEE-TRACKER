@@ -1,0 +1,19 @@
+.logout-container {
+    max-width: 400px;
+    margin: 140px auto;
+    padding: 20px;
+    background: #1a1a1a;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 200%;
+  }
+  
+  .logout-container h1 {
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .logout-container p {
+    color: #555;
+  }
+  

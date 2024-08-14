@@ -1,0 +1,123 @@
+/* Login.css */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0e0e0, #f9f9f9);
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+}
+
+.login-card {
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  max-width: 300px; /* Reduced width for a narrower form */
+  width: 100%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.login-form h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.login-form label {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 18px;
+  border-radius: 6px; /* Slightly reduced border radius */
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  transition: border-color 0.3s, background-color 0.3s;
+}
+
+.login-form input:focus {
+  outline: none;
+  border-color: #888;
+  background-color: #ffffff;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px; /* Slightly reduced border radius */
+  border: none;
+  background-color: #444;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.login-form button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.login-form button:hover:not(:disabled) {
+  background-color: #df3a08;
+  transform: translateY(-1px);
+}
+
+.login-form .success-message,
+.login-form .error-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 6px; /* Slightly reduced border radius */
+  text-align: center;
+  font-size: 13px;
+}
+
+.login-form .success-message {
+  background-color: #ecf9f1;
+  color: #2d8659;
+}
+
+.login-form .error-message {
+  background-color: #f9ecec;
+  color: #c63939;
+}
+
+.login-link {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.login-link a {
+  color: #444;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.login-link a:hover {
+  color: #e66e0b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
